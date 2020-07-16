@@ -66,12 +66,14 @@ export default (props) => {
 
     return (
         <View>
+            <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
              <View style={{ ...styles.contentContainer }}>
                  <Text style={{...styles.welcomeText}}>TOMATO APP</Text>
                  <Icon type="MaterialCommunityIcons" name="food"/>
-                 <TextInput onChangeText={(text) => setUsername(text)} placeholder="Input Username"></TextInput>
+                 <TextInput style={{height:50,width:300}} onChangeText={(text) => setUsername(text)} placeholder="Input Username"></TextInput>
                  <Button onPress={loginBtnHandler} >LOGIN</Button>
              </View>
+            </TouchableWithoutFeedback>
         </View>
     )
 }
